@@ -1,0 +1,18 @@
+:root{
+    --clr: #121212;
+}
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    background: var(--clr);
+}
+::-webkit-scrollbar{
+    width: 3px;
+    height: 8px;
+}
+::-webkit-scrollbar-track{
+    background: rgb(55, 55, 55);
+}
+::-webkit-scrollbar-thumb{
+    background: #ffffff;
+}

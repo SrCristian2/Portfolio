@@ -1,0 +1,161 @@
+.body_home *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30vh;
+}
+.skills{
+    color: #efb810;
+    font-size: 4vw;
+}
+.myName{
+    position: relative;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 5.5vw;
+    width: 100%;
+    transition: 0.5s;
+}
+.myName:hover{
+    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 50px rgb(0, 0, 0));
+    transition: 0.5s;
+}
+.Download_Cv_Btn{
+    position: relative;
+    display: inline-block;
+    background: rgba(55, 55, 55, 0.26);
+    padding: 15px 30px;
+    color: #efb810;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 2vw;
+    font-weight: 500;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.Download_Cv_Btn:hover{
+    color: #121212;
+    background: #efb810;
+    box-shadow: 0 0 10px #efb810, 0 0 40px #efb810, 0 0 80px #efb810;
+    transition-delay: 1s;
+}
+.Download_Cv_Btn span{
+    position: absolute;
+    display: block;
+}
+.Download_Cv_Btn span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #efb810);
+}
+.Download_Cv_Btn:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.Download_Cv_Btn span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #efb810);
+}
+.Download_Cv_Btn:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.Download_Cv_Btn span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #efb810);
+}
+.Download_Cv_Btn:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.Download_Cv_Btn span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #efb810);
+}
+.Download_Cv_Btn:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/*---Mobile devices---*/
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .skills{
+        font-size: 7.5vw;
+    }
+    .myName{
+        font-size: 8.5vw;
+    }
+    .Download_Cv_Btn{
+        font-size: 4vw;
+    }
+}
+
+/*---Tablet---*/
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .skills{
+        font-size: 7vw;
+    }
+    .myName{
+        font-size: 8vw;
+    }
+    .Download_Cv_Btn{
+        font-size: 3.8vw;
+    }
+}
+
+/*---Laptop---*/
+
+@media screen and (min-width:1024px) and (max-width:1220px){
+    .skills{
+        font-size: 5vw;
+    }
+    .myName{
+        font-size: 7vw;
+    }
+    .Download_Cv_Btn{
+        font-size: 3vw;
+    }
+}
+
+/*---Large Desktop---*/
+
+@media screen and (min-width:1220px){
+    .skills{
+        font-size: 4vw;
+    }
+    .myName{
+        font-size: 5.5vw;
+    }
+    .Download_Cv_Btn{
+        font-size: 2.5vw;
+    }
+}

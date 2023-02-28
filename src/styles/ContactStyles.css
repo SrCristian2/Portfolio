@@ -1,0 +1,212 @@
+.contact{
+    position: absolute;
+    left:0;
+    top: 0;
+    padding: 10px;
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title_contact_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.title_contact{
+    position: relative;
+    top: 0;
+   font-size: 3em;
+   color: #fff;
+   text-transform: uppercase;
+}
+.contact_info_container{
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(48vw, 1fr));
+}
+.logo_container{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo_container img{
+    width: 30vw;
+    height: 40vw;
+    border-radius: 3%;
+}
+.accounts_container{
+    width: 95%;
+    height: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accounts_ul{
+    width: 100%;
+    position: relative;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(8vw, 1fr));
+    gap: 25px;
+    list-style-type: none;
+}
+.accounts_ul li a{
+    display: flex;
+    position: relative;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 10%;
+    font-size: 35px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 5;
+    transition: 0.3s;
+}
+.accounts_ul li a::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 10%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
+    transition: 0.3s;
+}
+.accounts_ul li a:hover{
+    transform: rotate(-15deg);
+}
+.accounts_ul li a:hover::before{
+    transform: rotate(15deg);
+}
+.accounts_ul li a::before{
+    content: " ";
+    position: absolute;
+    width: 8vw;
+    height: 8vw;
+    background: #fff;
+    right: -5px;
+    bottom: 0;
+    border-radius: 10%;
+    z-index: -1;
+    transform-origin: 100% 100%;
+    transform: rotate(10deg);
+    transition: 0.3s;
+}
+.accounts_ul li:nth-child(1) a::before{
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+.accounts_ul li:nth-child(2) a::before{
+    background: #1c98e5;
+}
+.accounts_ul li:nth-child(3) a::before{
+    background: #40bb4f;
+}
+.accounts_ul li:nth-child(4) a::before{
+    background: #0961b8;
+}
+.accounts_ul li:nth-child(5) a::before{
+    background: #23272d;
+}
+.accounts_ul li:nth-child(6) a::before{
+    background: rgb(250,195,17);
+background: linear-gradient(90deg, rgba(250,195,17,1) 0%, rgba(235,80,65,1) 60%);
+}
+.accounts_ul li:nth-child(7) a::before{
+    background: #269fde;
+}
+
+/*---Mobile devices---*/
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .contact{
+        width: 94vw;
+    }
+    .logo_container img{
+        width: 60vw;
+        height: 60vw;
+    }
+    .contact_info_container{
+        display: flex;
+        flex-direction: column;
+    }
+    .accounts_container{
+        margin: 40px 0 0 10px;
+    }
+    .accounts_ul{
+        grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+    }
+    .accounts_ul li a{
+        width: 15vw;
+        height: 15vw;
+    }
+    .accounts_ul li a::after{
+        width: 15vw;
+        height: 15vw;
+    }
+    .accounts_ul li a::before{
+        width: 15vw;
+        height: 15vw;
+    }
+}
+
+/*---Tablet---*/
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .title_contact{
+        font-size: 4.5em;
+    }
+    .logo_container img{
+        width: 60vw;
+        height: 60vw;
+    }
+    .contact_info_container{
+        display: flex;
+        flex-direction: column;
+    }
+    .accounts_container{
+        margin: 40px 0 0 25px;
+    }
+    .accounts_ul{
+        grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+    }
+    .accounts_ul li a{
+        width: 15vw;
+        height: 15vw;
+    }
+    .accounts_ul li a::after{
+        width: 15vw;
+        height: 15vw;
+    }
+    .accounts_ul li a::before{
+        width: 15vw;
+        height: 15vw;
+    }
+}
+
+/*---Large Desktop---*/
+
+@media screen and (min-width:1434px){
+    .title_contact{
+        font-size: 5em;
+    }
+    .accounts_ul li a{
+        font-size: 60px;
+    }
+}

@@ -1,0 +1,451 @@
+.about{
+    position: absolute;
+    left:0;
+    top: 0;
+    padding: 10px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.name_container{
+    max-width: 100%;
+}
+.info_about{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(48vw, 1fr));
+    gap: 10px;
+}
+
+.top-tags::before {
+    content: '<html>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 1.2rem;
+    position: absolute;
+    top: -1.6rem;
+    margin-left: -1rem;
+}
+.top-tags:after {
+    content: '<p>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-left: 2rem;
+}
+.top-tags{
+    bottom: auto;
+    top: 3rem;
+}
+.tags{
+    color: #515152;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-family: 'La Belle Aurore',cursive;
+}
+.bottom-tags{
+    bottom: -3rem;
+    top: auto;
+}
+.bottom-tags::before {
+    content: '</p>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-left: 2rem;
+}
+.bottom-tags::after {
+    content: '</html>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-left: -5rem;
+    bottom: -1.6rem;
+}
+.text_about{
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.text_about p{
+    position: relative;
+    max-width: 80%;
+    top: 4rem;
+    left: 3rem;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/*skills cards*/
+
+.skills_container{
+    width: 92%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.title_skills{
+    position: relative;
+    top: 0;
+   font-size: 3em;
+   color: #fff;
+   text-transform: uppercase;
+}
+
+:root{
+    --js: #efd81d;
+    --html: #d84924;
+    --react: #00cdf2;
+    --vite: #b331f1;
+    --redux: #7046b2;
+    --npm: #c13534;
+    --node: #76c438;
+    --bootstrap: #8313ef;
+    --git: #e44c30;
+    --css: #0066b6;
+}
+
+.skills_icons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills_icons ul{
+    width: 100%;
+    position: relative;
+    margin-left: 10px;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
+    gap: 50px;
+}
+.skills_icons ul li{
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.skills_icons ul li:hover{
+    z-index: 1;
+    transform: scale(0.75);
+    transition: 0.5s;
+}
+.skills_icons ul li:hover::before{
+    inset: 0;
+}
+.skills_icons ul li::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #121212;
+    transform: rotate(45deg);
+}
+.skills_icons ul li span{
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    transition: 0.5s;
+}
+.icons{
+    vertical-align: middle;
+    color: white;
+}
+
+
+.js{
+    color: var(--js);
+}
+.skills_icons ul .li_js:hover span{
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--js)) drop-shadow(0 0 40px var(--js)) drop-shadow(0 0 60px var(--js));
+}
+.skills_icons ul .li_js::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--js),
+    0 0 0 20px #121212,
+    0 0 0 22px var(--js);
+    transition: 0.5s;
+}
+
+
+.html{
+    color: var(--html);
+}
+.skills_icons ul .li_html:hover span{
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--html)) drop-shadow(0 0 40px var(--html)) drop-shadow(0 0 60px var(--html));
+}
+.skills_icons ul .li_html::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--html),
+    0 0 0 20px #121212,
+    0 0 0 22px var(--html);
+    transition: 0.5s;
+}
+
+
+.react{
+    color: var(--react);
+}
+.skills_icons ul .li_react:hover span{
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--react)) drop-shadow(0 0 40px var(--react)) drop-shadow(0 0 60px var(--react));
+}
+.skills_icons ul .li_react::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--react),
+    0 0 0 20px #121212,
+    0 0 0 22px var(--react);
+    transition: 0.5s;
+}
+
+
+.vite{
+    color: var(--vite);
+}
+.skills_icons ul .li_vite:hover span{
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--vite)) drop-shadow(0 0 40px var(--vite)) drop-shadow(0 0 60px var(--vite));
+}
+.skills_icons ul .li_vite::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--vite),
+    0 0 0 20px #121212,
+    0 0 0 22px var(--vite);
+    transition: 0.5s;
+}
+
+
+.redux{
+    color: var(--redux);
+}
+.skills_icons ul .li_redux:hover span{
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--redux)) drop-shadow(0 0 40px var(--redux)) drop-shadow(0 0 60px var(--redux));
+}
+.skills_icons ul .li_redux::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--redux),
+    0 0 0 20px #121212,
+    0 0 0 22px var(--redux);
+    transition: 0.5s;
+}
+
+
+.npm{
+    color: var(--npm);
+}
+.skills_icons ul .li_npm:hover span{
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--npm)) drop-shadow(0 0 40px var(--npm)) drop-shadow(0 0 60px var(--npm));
+}
+.skills_icons ul .li_npm::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--npm),
+    0 0 0 20px #121212,
+    0 0 0 22px var(--npm);
+    transition: 0.5s;
+}
+
+
+.node{
+    color: var(--node);
+}
+.skills_icons ul .li_node:hover span{
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--node)) drop-shadow(0 0 40px var(--node)) drop-shadow(0 0 60px var(--node));
+}
+.skills_icons ul .li_node::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--node),
+    0 0 0 20px #121212,
+    0 0 0 22px var(--node);
+    transition: 0.5s;
+}
+
+
+.bootstrap{
+    color: var(--bootstrap);
+}
+.skills_icons ul .li_bootstrap:hover span{
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--bootstrap)) drop-shadow(0 0 40px var(--bootstrap)) drop-shadow(0 0 60px var(--bootstrap));
+}
+.skills_icons ul .li_bootstrap::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--bootstrap),
+    0 0 0 20px #121212,
+    0 0 0 22px var(--bootstrap);
+    transition: 0.5s;
+}
+
+
+.git{
+    color: var(--git);
+}
+.skills_icons ul .li_git:hover span{
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--git)) drop-shadow(0 0 40px var(--git)) drop-shadow(0 0 60px var(--git));
+}
+.skills_icons ul .li_git::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--git),
+    0 0 0 20px #121212,
+    0 0 0 22px var(--git);
+    transition: 0.5s;
+}
+
+
+.css{
+    color: var(--css);
+}
+.skills_icons ul .li_css:hover span{
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--css)) drop-shadow(0 0 40px var(--css)) drop-shadow(0 0 60px var(--css));
+}
+.skills_icons ul .li_css::before{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--css),
+    0 0 0 20px #121212,
+    0 0 0 22px var(--css);
+    transition: 0.5s;
+}
+/*---Mobile devices---*/
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .about{
+        width: 90vw;
+    }
+    .info_about{
+       position: relative;
+       display: flex;
+       flex-direction: column;
+    }
+    .text_about{
+        width: 92%;
+        padding: 0 0 0 30px;
+    }
+    .text_about p{
+        max-width: 75%;
+        font-size: 19px;
+    }
+    .skills_container{
+        margin-top: 70px;
+    }
+}
+
+/*---Tablet---*/
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .skills_container{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+
+/*---Laptop---*/
+
+@media screen and (min-width:1024px) and (max-width:1434px){
+    .about{
+        width: 98vw;
+    }
+    .text_about p{
+        font-size: 20px;
+    }
+}
+
+/*---Large Desktop---*/
+
+@media screen and (min-width:1435px){
+    .about{
+        width: 98vw;
+    }
+    .text_about p{
+        font-size: 2.3em;
+        line-height: 4vh;
+    }
+    .skills_icons ul{
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 50px;
+    }
+    .skills_icons ul li{
+        width: 130px;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills_icons ul li span{
+        font-size: 3.5em;
+    }
+    .skills_icons ul .li_js:hover span{
+        font-size: 3.5em;
+    }
+    .skills_icons ul .li_html:hover span{
+        font-size: 3.5em;
+    }
+    .skills_icons ul .li_react:hover span{
+        font-size: 3.5em;
+    }
+    .skills_icons ul .li_vite:hover span{
+        font-size: 3.5em;
+    }
+    .skills_icons ul .li_redux:hover span{
+        font-size: 3.5em;
+    }
+    .skills_icons ul .li_node:hover span{
+        font-size: 3.5em;
+    }
+    .skills_icons ul .li_bootstrap:hover span{
+        font-size: 3.5em;
+    }
+    .skills_icons ul .li_git:hover span{
+        font-size: 3.5em;
+    }
+    .skills_icons ul .li_css:hover span{
+        font-size: 3.5em;
+    }
+}

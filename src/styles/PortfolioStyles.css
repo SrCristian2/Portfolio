@@ -1,0 +1,226 @@
+.body_portfolio *{
+    box-sizing: border-box;
+}
+.portfolio{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100vw;
+    max-height: 100vh;
+}
+.container_title_proyects{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title_proyects{
+    position: relative;
+    top: 0;
+   font-size: 3em;
+   color: #fff;
+   text-transform: uppercase;
+}
+.container_proyects{
+    display: flex;
+    width: 95vw;
+    height: 85vh;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.container_proyects .proyect{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    transition: .5s ease;
+    position: relative;
+}
+.proyect img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.proyect:hover img{
+    filter: brightness(0.2);
+}
+.proyect:hover{
+    cursor: crosshair;
+    width: 47.5vw;
+}
+.proyect:hover .datails{
+    opacity: 1;
+    height: 85vh;
+}
+.datails{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 0vh;
+    background: transparent;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+.datails h3{
+    margin: 0 1em;
+    font-size: 3em;
+    color: #fff;
+    font-weight: 600;
+}
+.datails p{
+    margin: 1em;
+    font-size: 18px;
+    color: #fff;
+    font-style: italic;
+}
+.links_icon_proyects{
+    display: flex;
+    gap: 1em;
+}
+.links_icon_proyects .link{
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #515152;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.4s;
+}
+.links_icon_proyects .link:hover{
+    transform: rotate(45deg);
+}
+.links_icon_proyects .link::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #373737;
+    border-radius: 10px;
+    transition: opasity 0.2s;
+}
+.links_icon_proyects .link:hover::before{
+    opacity: 0.4;
+}
+.links_icon_proyects .link:nth-child(1)::before{
+    background: #00bcac;
+}
+.links_icon_proyects .link:nth-child(2)::before{
+    background: #822796;
+}
+.links_icon_proyects .link:hover::before{
+    transform: translate(-4px, -4px);
+    filter: blur(10px);
+}
+.links_icon_proyects .link .i{
+    font-size: 1.5em;
+    transition: all 0.4s;
+}
+.links_icon_proyects .link:hover .i{
+    transform: rotate(-45deg);
+}
+
+/*---Mobile devices---*/
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .container_proyects{
+        flex-direction: column;
+        width: 95vw;
+        height: 95vh;
+    }
+    .container_proyects .proyect{
+        width: 100%;
+        height: 0;
+    }
+    .proyect:hover{
+        height: 47.5vh;
+    }
+    .proyect:hover .datails{
+        opacity: 1;
+        height: 47.5vh;
+    }
+    .datails h3{
+        font-size: 2em;
+    }
+    .datails p{
+        margin: 1em 1em 0.2em 1em;
+        font-size: 0.8em;
+    }
+    .links_icon_proyects .link{
+        margin: 0 10px;
+        width: 2em;
+        height: 2em;
+    }
+    .links_icon_proyects .link .i{
+        font-size: 1em;
+        transition: all 0.4s;
+    }
+}
+
+/*---Tablet---*/
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .title_proyects{
+       font-size: 4em;
+       color: #fff;
+       text-transform: uppercase;
+    }
+    .container_proyects{
+        flex-direction: column;
+        width: 95vw;
+        height: 95vh;
+    }
+    .container_proyects .proyect{
+        width: 100%;
+        height: 0;
+    }
+    .proyect:hover{
+        height: 47.5vh;
+    }
+    .proyect:hover .datails{
+        opacity: 1;
+        height: 47.5vh;
+    }
+    .datails h3{
+        font-size: 3em;
+    }
+    .datails p{
+        margin: 1em;
+        font-size: 1.5em;
+    }
+}
+
+/*---Large Desktop---*/
+
+@media screen and (min-width:1435px){
+    .title_proyects{
+        font-size: 4em;
+    }
+    .datails h3{
+        font-size: 4em;
+    }
+    .datails p{
+        margin: 1em;
+        font-size: 2em;
+    }
+    .links_icon_proyects .link{
+        width: 4em;
+        height: 4em;
+    }
+    .links_icon_proyects .link .i{
+        font-size: 2.5em;
+    }
+}

@@ -1,0 +1,130 @@
+.body_navigation *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navigation{
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    word-wrap: break-word;
+    z-index: 6;
+}
+.menuToggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: rgb(55, 55, 55);
+    box-shadow: 0 2px 5px 0 hsla(0%, 0%, 0%, 0.26);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    line-height: 3.9;
+    cursor: pointer;
+    outline: 0;
+}
+.menuToggle::before{
+    content: "";
+    position: absolute;
+    border: 2px dashed #fff;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 5px 5px #000;
+    animation: rotar 6s linear infinite;
+}
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.navigation .menuToggle:active{
+    box-shadow: 0 4px 8px 0 hsla(0%, 0%, 0%, 0.4);
+}
+.navigation .menuToggle i{
+    font-size: 1.8em;
+    transition: transform 0.2s;
+}
+.navigation.active .menuToggle i{
+    transform: rotate(-90deg);
+    transition: 0.4s;
+}
+.navigation::after{
+    display: block;
+    content: "";
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    background-color: rgb(43, 43, 43);
+    transition: all 0.3s ease;
+}
+.navigation.active::after{
+    transform: scale3d(5.5, 5.5, 1);
+    transition-timing-function: cubic-bezier(0.68, 1.55, 0.265, 1);
+}
+.navigation .navItems{
+    padding: 0;
+    margin: 0;
+}
+.navigation .a{
+    position: absolute;
+    top: 0.2em;
+    right: 0.2em;
+    z-index: -1;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3;
+    background-color: rgb(55, 55, 55);
+    transition: transform 0.5s ease, background 0.2s ease;
+    list-style: none;
+}
+.navigation .a span{
+    width: 3em;
+    height: 3em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation .a i{
+    font-size: 1.6em;
+    transition: transform 0.2s
+}
+.navigation .a:hover{
+    box-shadow: 0px 0px 5px 5px #efb810;
+    transition: 0.5s;
+}
+.navigation.active .active{
+    box-shadow: 0px 0px 5px 5px #efb810;
+}
+.navigation.active .a{
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.navigation.active .a:nth-child(1){
+    transform: translate3d(1em, -7em, 0);
+}
+.navigation.active .a:nth-child(2){
+    transform: translate3d(-3.5em, -6.3em, 0);
+}
+.navigation.active .a:nth-child(3){
+    transform: translate3d(-6.5em, -3.2em, 0);
+}
+.navigation.active .a:nth-child(4){
+    transform: translate3d(-7em, 1em, 0);
+}
